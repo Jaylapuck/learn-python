@@ -336,3 +336,24 @@ def test_nested_list_comprehensions():
         (3, 7, 11),
         (4, 8, 12),
     ]
+
+def test_list_slicing():
+    data = [42, 19, 6, 73, 88, 7, 31, 64]
+
+    # Elements from index 2 up to (excluding) index 6
+    assert data[2:6] == [6, 73, 88, 7]
+
+    # First 3 elements
+    assert data[:3] == [42, 19, 6]
+
+    # Elements from index 5 to the end
+    assert data[5:] == [7, 31, 64]
+
+def test_list_slicing_with_step():
+    data = [42, 19, 6, 73, 88, 7, 31, 64]
+
+    # Every second element from index 1 to index 6
+    assert data[1:7:2] == [19, 73, 7]
+
+    # Every third element from the start to the end
+    assert data[::3] == [42, 73, 31]
