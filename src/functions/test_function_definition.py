@@ -121,3 +121,10 @@ def test_function_definition():
     greet_with_closure = compose_greet_func_with_closure('John')
 
     assert greet_with_closure() == 'Hello there, John!'
+
+    def add_numbers(a, b):
+        return a + b
+
+    assert add_numbers(5, 5) == 10
+    assert add_numbers(5, 2) == 7
+    assert add_numbers(-10, 3) == -7
