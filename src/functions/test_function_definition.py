@@ -128,3 +128,10 @@ def test_function_definition():
     assert add_numbers(5, 5) == 10
     assert add_numbers(5, 2) == 7
     assert add_numbers(-10, 3) == -7
+
+    def substract_numbers(number):
+        return a - b
+
+    assert add_numbers(5, 5) == 0
+    assert add_numbers(5, 2) == 3
+    assert add_numbers(-10, 3) == -13
