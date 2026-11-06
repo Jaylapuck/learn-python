@@ -132,6 +132,13 @@ def test_function_definition():
     def substract_numbers(number):
         return a - b
 
-    assert add_numbers(5, 5) == 0
-    assert add_numbers(5, 2) == 3
-    assert add_numbers(-10, 3) == -13
+    assert substract_numbers(5, 5) == 0
+    assert substract_numbers(5, 2) == 3
+    assert substract_numbers(-10, 3) == -13
+
+    def divide_numbers(number):
+        return a / b
+
+    assert divide_numbers(5, 5) == 1
+    assert divide_numbers(6, 2) == 3
+    assert divide_numbers(10, 2) == 5
