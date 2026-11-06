@@ -99,3 +99,23 @@ def test_dictionary_fruit_removal_and_safe_retrieval():
 
     # pop() can also take a default value for missing keys.
     assert fruit_basket.pop('pineapple', 0) == 0
+
+    def test_dictionary_fruit_prices_update_and_setdefault():
+        """Updating fruit prices and inserting defaults with setdefault()."""
+
+        fruit_prices = {
+            'apple': 1.50,
+            'banana': 0.75,
+        }
+
+        # setdefault() returns the existing value if the key is present,
+        # otherwise it inserts the default and returns it.
+        assert fruit_prices.setdefault('apple', 2.00) == 1.50
+        assert fruit_prices.setdefault('cherry', 3.25) == 3.25
+        assert fruit_prices['cherry'] == 3.25
+
+        # update() merges entries from another dictionary, overwriting existing keys.
+        fruit_prices.update({'banana': 0.90, 'mango': 2.10})
+        assert fruit_prices['banana'] == 0.90
+        assert fruit_prices['mango'] == 2.10
+        assert fruit_prices['apple'] == 1.50
