@@ -77,3 +77,25 @@ def test_dictionary():
     assert dictionary_for_string_keys['sape'] == 4139
     assert dictionary_for_string_keys['guido'] == 4127
     assert dictionary_for_string_keys['jack'] == 4098
+
+def test_dictionary_fruit_removal_and_safe_retrieval():
+    """Removing fruits from a basket and retrieving them safely."""
+
+    fruit_basket = {
+        'apple': 5,
+        'banana': 3,
+        'cherry': 12,
+    }
+
+    # pop() removes the key and returns its value.
+    bananas_taken = fruit_basket.pop('banana')
+    assert bananas_taken == 3
+    assert 'banana' not in fruit_basket
+
+    # get() returns None (or a default) instead of raising KeyError for missing keys.
+    assert fruit_basket.get('banana') is None
+    assert fruit_basket.get('banana', 0) == 0
+    assert fruit_basket.get('apple') == 5
+
+    # pop() can also take a default value for missing keys.
+    assert fruit_basket.pop('pineapple', 0) == 0
