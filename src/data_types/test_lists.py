@@ -349,8 +349,8 @@ def test_list_slicing():
     # Elements from index 5 to the end
     assert data[5:] == [7, 31, 64]
 
-    # Elements from the sixth-to-last index up to (but not including) the last
-    assert data[-6:-1] == [6, 73, 88, 7, 31]
+    # Elements from the seventh-to-last index up to (but not including) the last
+    assert data[-7:-1] == [19, 6, 73, 88, 7, 31]
 
 def test_list_slicing_with_step():
     data = [42, 19, 6, 73, 88, 7, 31, 64]
