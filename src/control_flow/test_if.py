@@ -63,3 +63,14 @@ def test_nested_if_statement():
         price = 5
  
     assert price == 8
+
+def test_if_statement_boolean()
+    isNum = True
+    conclusion = ''
+
+    if isNum:
+        conclusion = 'This is a num'
+    else:
+        conclusion = 'This is not a num'
+
+    assert conclusion == 'This is a num'
