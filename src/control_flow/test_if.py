@@ -37,3 +37,39 @@ def test_if_statement_boolean():
         conclusion = 'It is not a number'
 
     assert conclusion == 'It is not a number'
+
+def test_if_multiple_elif_statement():
+    """IF statement with multiple elif branches"""
+ 
+    score = 85
+    grade = ''
+ 
+    if score >= 90:
+        grade = 'A'
+    elif score >= 80:
+        grade = 'B'
+    elif score >= 70:
+        grade = 'C'
+    elif score >= 60:
+        grade = 'D'
+    else:
+        grade = 'F'
+ 
+    assert grade == 'B'
+
+def test_nested_if_statement():
+    """Nested IF statement"""
+ 
+    age = 30
+    is_student = True
+    price = 0
+ 
+    if age >= 18:
+        if is_student:
+            price = 8
+        else:
+            price = 12
+    else:
+        price = 5
+ 
+    assert price == 8
