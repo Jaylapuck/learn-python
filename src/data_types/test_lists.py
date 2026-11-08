@@ -349,8 +349,11 @@ def test_list_slicing():
     # Elements from index 5 to the end
     assert data[5:] == [7, 31, 64]
 
-    # Elements from index 2 up to (but not including) the last element
-    assert data[2:-1] == [6, 73, 88, 7, 31]
+    # Elements from index -6 to index -2 (excluding)
+    assert data[-6:-2] == [6, 73, 88, 7]
+
+    # Slice with a step: every second element from index 1 to index 6
+    assert data[1:7:2] == [data[1], data[3], data[5]]
 
 def test_list_slicing_with_step():
     data = [42, 19, 6, 73, 88, 7, 31, 64]
