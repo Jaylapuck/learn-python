@@ -64,7 +64,23 @@ def test_nested_if_statement():
  
     assert price == 8
 
-def test_if_statement_boolean()
+def test_if_with_logical_operators():
+    """IF statement with logical operators"""
+
+    temperature = 25
+    is_raining = False
+    activity = ''
+
+    if temperature > 20 and not is_raining:
+        activity = 'Go for a walk'
+    elif temperature <= 20 and not is_raining:
+        activity = 'Stay indoors'
+    else:
+        activity = 'Take an umbrella'
+
+    assert activity == 'Go for a walk'
+
+def test_if_statement_boolean():
     isNum = True
     conclusion = ''
 
