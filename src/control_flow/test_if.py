@@ -26,3 +26,14 @@ def test_if_statement():
         conclusion = 'Number bigger than or equal to one'
 
     assert conclusion == 'Number bigger than or equal to one'
+
+def test_if_statement_boolean():
+    isNumber = False
+    conclusion = ''
+
+    if isNumber:
+        conclusion = 'It is a number'
+    else:
+        conclusion = 'It is not a number'
+
+    assert conclusion == 'It is not a number'
